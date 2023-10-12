@@ -27,21 +27,26 @@
             <button class="border-2 border-gray-400 w-[100px] rounded-md bg-white">modified v</button>
         </div>
 
-        <div class="ml-4 mt-2 bg-slate-300 border rounded-lg h-[85%]">
-            <div class="h-10 bg-slate-400 flex-row">
-                
+        <div class="ml-4 mt-2 border rounded-lg h-[85%]">
+            <div class="h-10 flex-row ml-16">
+                <p>Name</p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
 
-            <div class="h-[94%] rounded-lg bg-slate-500 flex-col">
+            <div class="h-[94%] rounded-lg flex-col">
                 <div class="flex flex-col mt-3 ml-5 h-[98%] bg-white">
                     <!----------------------->
 
                     
-                    <div class="grid grid-cols-4 gap-1 p-2 border">
-                    <div class="pt-1 grid grid-col w-[50%] lg:w-[20%]" v-for="folder in folders">
-                            <font-awesome-icon :icon="faFolder" class="flex w-[100%] h-[100%] text-blue-400"/>
-                            <p class=" ml-[20%] ">{{ folder.name }}</p>
-                    </div>
+                    <div class=" gap-1 p-2 border flex flex-col">
+                        <div class=" lg:w-[100%] lg:h-[40px] flex flex-row border border-b-gray-400" v-for="folder in folders">
+                                
+                            <font-awesome-icon :icon="faFolder" class="flex w-10 h-10 text-blue-400"/>
+                            <p class=" ml-5 w-[200px]">{{ folder.name }}</p>
+                        </div>
+                        
                     </div>
                     <!----------------------->
 
@@ -57,7 +62,7 @@
             </div>
 
 
-            <div class="t-0 mt-2 mr-2 w-[20px] h-[20px] flex flex-col">
+            <div class="t-0 mt-2 mr-2 w-[15px] h-[15px] flex flex-col">
                 <div class="flex">
                     <font-awesome-icon :icon="faDownload" class="flex w-[100%] h-[100%] text-blue-400"/>
                 </div>
