@@ -9,7 +9,7 @@
                     <div class="flex justify-center items-center font-serif text-[20px]">
                         <p class="mt-5">MARIANO MARCOS STATE UNIVERSITY</p>
                     </div>
-                    <div class="flex justify-center items-end ml-4 mb-1 w-[700px]">
+                    <div class="flex justify-center items-end ml-4 mb-1 w-[800px]">
                         <input class="border mt-5 h-12 rounded-3xl w-[100%] text-center focus:outline-none custom-shadow placeholder-green-800 bg-mmsu-light-gray" type="text" placeholder="Search For files and Folders">
                     </div>
                     <div class="flex justify-center items-end ml-10 mb-1 ">

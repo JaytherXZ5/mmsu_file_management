@@ -11,7 +11,7 @@ const routes = [
 
     },
     {
-        path: '/folder/create',
+        path: '/create',
         name: 'CreateFolder',
         component: createFolder,
         meta: {title: 'Create folder'}

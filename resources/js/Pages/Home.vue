@@ -16,7 +16,8 @@
         <Navigation/>
     </div> 
 
-    <div class="mt-2 flex w-[78%] rounded-2xl h-[88%] border shadow-xl flex-col">
+    <!-------------------------------------------MY FILES------------------------------>
+    <div class="mt-2 flex w-[78%] rounded-2xl h-[88%] border shadow-left-side flex-col bg-mmsu-light-gray">
 
         <div class=" flex flex-row h-10 mt-2 ml-4 gap-5">
             <img src="../../../public/images/icons/back.png" @click="$event=>$router.go(-1)" class="w-10 h-10">
@@ -36,44 +37,56 @@
             </div>
 
             <div class="h-[94%] rounded-lg flex-col">
-                <div class="flex flex-col mt-3 ml-5 h-[98%] bg-white">
+                <div class="flex flex-col mt-3 ml-5 h-[95%] bg-mmsu-light-gray">
                     <!----------------------->
 
                     
-                    <div class=" gap-1 p-2 border flex flex-col">
-                        <div class=" lg:w-[100%] lg:h-[40px] flex flex-row border border-b-gray-400" v-for="folder in folders">
+                    <div class=" gap-1 p-2 border flex flex-col bg-mmsu-light-gray overflow-hidden">
+                        <div class=" lg:w-[100%] lg:h-[40px] flex flex-row border border-b-gray-200" v-for="folder in folders">
                                 
-                            <font-awesome-icon :icon="faFolder" class="flex w-10 h-10 text-blue-400"/>
+                            <!--<font-awesome-icon :icon="faFolder" class="flex w-10 h-10 text-blue-400"/>-->
+                            <img src="/images/icons/folder.png" class="flex w-10 h-8 text-blue-400" alt="" srcset="">
                             <p class=" ml-5 w-[200px]">{{ folder.name }}</p>
                         </div>
                         
                     </div>
                     <!----------------------->
 
-                    <div class="px-1 mt-4">
-        <p class="px-2 mb-2"> Recent Uploads</p>
-        <div class="flex mt-0 border cursor-pointer"  v-for="file in files">
-            <div class="pt-0 w-[52px] h-[67px] flex justify-center items-center">
-                  <img :src="`/images/icons/${file.type}.png`" alt="">
-            </div>
-            <div class=" px-2 w-[100%] bg-slate cursor-pointer">
-                <p class=" my-2 w-[80%] h-[20px]">{{ file.name + '.'+file.type }}</p>
-                <p class=" mt-2 w-[80%] h-[20px] text-[10px]">{{ file.create_at }}</p>
-            </div>
+                    <div class="px-1 mt-4 w-full" >
+                        <p class="px-2 mb-2 flex"> Recent Uploads</p>
+
+                        
+                        <!--
+                        <div class="flex mt-0 cursor-pointer"  v-for="file in files">
+                            <div class="pt-0 w-[52px] h-[67px] flex justify-center items-center">
+                                <img :src="`/images/icons/${file.type}.png`" alt="">
+                            </div>
+                            <div class=" px-2 w-[100%] bg-slate cursor-pointer">
+                                <p class=" my-2 w-[80%] h-[20px]">{{ file.name + '.'+file.type }}</p>
+                                <p class=" mt-2 w-[80%] h-[20px] text-[10px]">{{ file.create_at }}</p>
+                            </div>
 
 
-            <div class="t-0 mt-2 mr-2 w-[15px] h-[15px] flex flex-col">
-                <div class="flex">
-                    <font-awesome-icon :icon="faDownload" class="flex w-[100%] h-[100%] text-blue-400"/>
-                </div>
-                <div class=" mt-2 flex">
-                    <font-awesome-icon :icon="faArchive" class="flex w-[100%] h-[100%] text-red-500" />
-                </div>
+                            <div class="t-0 mt-2 mr-2 w-[15px] h-[15px] flex flex-col">
+                                <div class="flex">
+                                    <font-awesome-icon :icon="faDownload" class="flex w-[100%] h-[100%] text-blue-400"/>
+                                </div>
+                                <div class=" mt-2 flex">
+                                    <font-awesome-icon :icon="faArchive" class="flex w-[100%] h-[100%] text-red-500" />
+                                </div>
                 
-                
-            </div>
-        </div>
-    </div>
+                            </div>
+                        </div>
+                    -->
+                    
+                    
+                     </div>
+                     <div class=" h-[50%] flex flex-row">
+                        <div class=" pt-0 w-[100%] h-[100%] flex justify-center items-center " v-for="file in files">
+                                <img :src="`/images/icons/${file.type}.png`" class="w-[70%] mt-[] " alt="">
+                                <p class="absolute mr-[50px] mt-[40px] text-green-900">{{ file.name + '.'+file.type }}</p>
+                        </div>
+                     </div>
                 </div>
             </div>
 
