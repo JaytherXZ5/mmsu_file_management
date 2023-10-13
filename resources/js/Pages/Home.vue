@@ -5,7 +5,7 @@
                 <button class="w-[180px] h-14 border rounded-xl shadow-left-side flex-row ">
                     <p class="flex justify-center items-center text-[20px]">
                         <font-awesome-icon :icon="faPlus" class="flex w-[10%] text-green-600 mr-3"/>
-                        NEW
+                        <h1 class="font-semibold text-green-700">NEW</h1>
                     </p>
                 </button>
             </router-link>
@@ -21,39 +21,39 @@
 
         <div class=" flex flex-row h-10 mt-2 ml-4 gap-5">
             <img src="../../../public/images/icons/back.png" @click="$event=>$router.go(-1)" class="w-10 h-10">
-            <input type="text" class="border rounded-xl w-[80%] border-gray-400">
+            <input type="text" class="rounded-xl w-[80%] bg-slate-200 pl-3 placeholder:font-semibold placeholder:text-green-700" placeholder="/Root/MyFolder/file.png">
         </div>
         <div class="ml-4 flex flex-row gap-6 mt-2">
-            <button class="border-gray-400 border-2 w-[100px] rounded-md bg-white">type v</button>
-            <button class="border-2 border-gray-400 w-[100px] rounded-md bg-white">modified v</button>
+            <button class="border-gray-400 w-[100px] rounded-xl bg-gray-300 p-2">type v</button>
+            <button class=" border-gray-400 w-[100px] rounded-xl bg-gray-300">modified v</button>
         </div>
 
-        <div class="ml-4 mt-2 border rounded-lg h-[85%]">
-            <div class="h-10 flex-row ml-16">
-                <p>Name</p>
+        <div class="ml-4 mt-2 border rounded-lg h-[82%]">
+            <div class="h-10 flex-row ml-16 ">
+                <p class="flex mt-2 font-semibold font-sans">Name</p>
                 <p></p>
                 <p></p>
                 <p></p>
             </div>
 
             <div class="h-[94%] rounded-lg flex-col">
-                <div class="flex flex-col mt-3 ml-5 h-[95%] bg-mmsu-light-gray">
+                <div class="flex flex-col ml-5 h-[95%] bg-mmsu-light-gray">
                     <!----------------------->
 
                     
-                    <div class=" gap-1 p-2 border flex flex-col bg-mmsu-light-gray overflow-hidden">
-                        <div class=" lg:w-[100%] lg:h-[40px] flex flex-row border border-b-gray-200" v-for="folder in folders">
+                    <div class=" gap-1 p-2  flex flex-col bg-mmsu-light-gray overflow-hidden">
+                        <div class=" lg:w-[100%] lg:h-[40px] flex flex-row border-b-2" v-for="folder in folders">
                                 
                             <!--<font-awesome-icon :icon="faFolder" class="flex w-10 h-10 text-blue-400"/>-->
                             <img src="/images/icons/folder.png" class="flex w-10 h-8 text-blue-400" alt="" srcset="">
-                            <p class=" ml-5 w-[200px]">{{ folder.name }}</p>
+                            <p class=" ml-5 w-[200px] font-medium mt-1 font-mono">{{ folder.name }}</p>
                         </div>
                         
                     </div>
                     <!----------------------->
 
                     <div class="px-1 mt-4 w-full" >
-                        <p class="px-2 mb-2 flex"> Recent Uploads</p>
+                        <p class="px-2 mb-2 flex text-[24px]"> Recent Uploads</p>
 
                         
                         <!--
@@ -81,10 +81,10 @@
                     
                     
                      </div>
-                     <div class=" h-[50%] flex flex-row">
-                        <div class=" pt-0 w-[100%] h-[100%] flex justify-center items-center " v-for="file in files">
-                                <img :src="`/images/icons/${file.type}.png`" class="w-[70%] mt-[] " alt="">
-                                <p class="absolute mr-[50px] mt-[40px] text-green-900">{{ file.name + '.'+file.type }}</p>
+                     <div class=" h-[50%] flex flex-row bg-gray-100 rounded-lg">
+                        <div class=" pt-0 w-[100%] h-[100%] flex justify-start items-center " v-for="file in files">
+                                <img :src="`/images/icons/${file.type}.png`" class="w-[200px] mt-[] " alt="">
+                                <p class="absolute ml-10 mt-[40px] text-green-900">{{ file.name + '.'+file.type }}</p>
                         </div>
                      </div>
                 </div>

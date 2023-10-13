@@ -10,11 +10,13 @@
                         <p class="mt-5">MARIANO MARCOS STATE UNIVERSITY</p>
                     </div>
                     <div class="flex justify-center items-end ml-4 mb-1 w-[800px]">
-                        <input class="border mt-5 h-12 rounded-3xl w-[100%] text-center focus:outline-none custom-shadow placeholder-green-800 bg-mmsu-light-gray" type="text" placeholder="Search For files and Folders">
+                        <input class="border mt-5 h-12 rounded-3xl w-[100%] text-center focus:outline-none custom-shadow placeholder:font-semibold placeholder-green-800 bg-mmsu-light-gray" type="text" placeholder="Search For Files and Folders">
+                        <font-awesome-icon :icon="faMagnifyingGlass" class="w-7 h-7 absolute ml-[700px] mb-2"/>
                     </div>
                     <div class="flex justify-center items-end ml-10 mb-1 ">
                         <img src="../../public/images/profile.png" class="w-12 custom-shadow rounded-full" alt="" srcset="">
                     </div>
+                    <div class="flex "><h2 class=" font-semibold font-mono text-[20px] mt-9 ml-4">JAYTHER</h2></div>
                 </div>
                 <div class="flex flex-row h-[99%]">
                     <router-view></router-view>
@@ -24,9 +26,13 @@
     </div>
 
 </template>
+
 <script>
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 export default {
-    
+    computed:{
+        faMagnifyingGlass(){return faMagnifyingGlass;},
+    }
 }
 </script>
 <style lang="">
